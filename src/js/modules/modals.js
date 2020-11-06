@@ -1,8 +1,8 @@
 const modals = () => {
     function bindModal(triggerSelector, modalSelector, closeSelector) {
-        const trigger = document.querySelectorAll(triggerSelector),
-              modal   = document.querySelector(modalSelector),
-              close   = document.querySelector(closeSelector);
+        const trigger = document.querySelectorAll(triggerSelector);
+        const modal   = document.querySelector(modalSelector);
+        const close   = document.querySelector(closeSelector);
 
         trigger.forEach(item => {
             item.addEventListener('click', (e) => {
@@ -40,7 +40,7 @@ const modals = () => {
 
     bindModal('.popup_engineer_btn', '.popup_engineer', '.popup_engineer .popup_close');
     bindModal('.phone_link', '.popup', '.popup .popup_close');
-    showModalByTime('.popup', 60000);
+    // showModalByTime('.popup', 60000);
 };
 
 export default modals;
